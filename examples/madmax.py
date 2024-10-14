@@ -34,8 +34,7 @@ if __name__ == '__main__':
 
     misp = ExpandedPyMISP(misp_url, misp_key, misp_verifycert, cert=misp_client_cert)
     #result = misp.search(publish_timestamp=args.last, limit=args.limit, page=args.page, pythonify=True)
-    #result = misp.search(org='RF', controller='attributes', to_ids=1, publish_timestamp=args.last, limit=args.limit, page=args.page, pythonify=True)
-    result = misp.search(org='RF', controller='attributes', to_ids=1, publish_timestamp=args.last, limit=args.limit, page=args.page, pythonify=True)    
+    result = misp.search(org='RF', controller='attributes', publish_timestamp=args.last, limit=args.limit, page=args.page, pythonify=True)    
 
     if not result:
         print('No results for that time period')
